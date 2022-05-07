@@ -2,6 +2,7 @@ import 'package:challenge_ui_plant_app/constants.dart';
 import 'package:challenge_ui_plant_app/models/plant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:localization/localization.dart';
 
 class HeaderWithSearchBox extends StatelessWidget {
   const HeaderWithSearchBox({
@@ -35,7 +36,7 @@ class HeaderWithSearchBox extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                "Plant App",
+                    "welcome-text".i18n(),
                 textAlign: TextAlign.center,
                 style: Theme.of(context)
                     .textTheme

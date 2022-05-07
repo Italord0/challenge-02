@@ -1,6 +1,7 @@
 import 'package:challenge_ui_plant_app/constants.dart';
 import 'package:challenge_ui_plant_app/screens/detail/components/plant_detail_body.dart';
 import 'package:flutter/material.dart';
+import 'package:localization/localization.dart';
 
 class PlantDetailScreen extends StatelessWidget {
   const PlantDetailScreen({Key? key}) : super(key: key);
@@ -9,7 +10,7 @@ class PlantDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Plant detail"),
+        title: Text("plant-detail".i18n()),
         backgroundColor: kPrimaryColor,
         elevation: 0,
       ),

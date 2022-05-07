@@ -9,6 +9,8 @@ import 'package:sqflite/sqflite.dart';
 import 'header_with_searchbox.dart';
 import 'recomended_plant_list.dart';
 import 'title_with_button_row.dart';
+import 'package:localization/localization.dart';
+
 
 class HomeBodyArguments {
   final List<Plant> plants;
@@ -53,8 +55,8 @@ class _HomeBodyState extends State<HomeBody> {
           HeaderWithSearchBox(
               screenSize: screenSize, plants: allPlants, result: _onSearch),
           TitleWithButtonRow(
-            title: "Favorite Plants",
-            buttonText: "More",
+            title: "favorite-plants".i18n(),
+            buttonText: "more".i18n(),
             onPressed: () => Navigator.pushNamed(context, '/favorites',
                 arguments: HomeBodyArguments(
                     plants: favoritePlants,
@@ -65,8 +67,8 @@ class _HomeBodyState extends State<HomeBody> {
             onFavorited: (plant) => _onFavoritedPlant(plant),
           ),
           TitleWithButtonRow(
-            title: "All Plants",
-            buttonText: "More",
+            title: "all-plants".i18n(),
+            buttonText: "more".i18n(),
             onPressed: () => Navigator.pushNamed(context, '/all',
                 arguments: HomeBodyArguments(plants: allPlants)),
           ),
